@@ -1,0 +1,656 @@
+@font-face{ 
+	font-family: "Police1"; 
+	src:url('fonts/HWYGNRRW.ttf'); 
+}
+
+html, body{  
+	scroll-behavior: smooth; 
+	margin: 0; 
+	font-family: Police1, Bahnschrift Light, Dubai Medium, Arial, sans-serif; 
+	background-color: #000;
+}
+
+img, video, iframe{
+	max-width: 100%; 
+}
+
+table{
+	font-size: 20px;
+	width: 50vw;
+	border-collapse: collapse;
+}
+
+table, th, td {
+	border: 1px solid black;
+}
+
+table img {
+	width: 10vh;
+}
+
+th {
+	background-color: rgba(0, 0, 0, 0.253);
+}
+
+.scrolltable {
+	overflow: auto;
+	height: 25vh
+}
+
+/*Navigation----------------------------------------------------------------------------------------------------------*/
+
+main {
+	position: sticky; 
+	top:0; 
+	right: 0; 
+	left: 0; 
+	z-index: 2;
+	background-color: #151515;
+}
+
+main #logobap{
+	width: 200px; 
+	z-index: 1; 
+	position: absolute;
+	transition: width 200ms;
+}
+
+main #logobap:hover{
+	width: 210px;
+}
+
+main #navigation{
+	border-bottom: 2px #fff000 solid;
+}
+
+main #navigation #lienbouton{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	margin-left: 200px
+}
+
+main #navigation a#hamburger{
+	display: none;
+}
+
+main #navigation a{
+	color: #fff001; 
+	text-decoration: none;
+	padding:30px; 
+	display: inline-block; 
+	font-size: 25px;
+}
+
+main #navigation a:hover, #navigation a:focus{
+	text-decoration: none; 
+	color: #c6ba00; 
+	background-color: #2D2D2D;
+	text-shadow: 1px 1px 1px black;
+	transition: background-color 400ms;
+}
+
+main #navigation a:active{
+	color: #FFD; 
+	background-color: #F3c720;
+}
+
+main #iconeutilisateur{
+	width: 25px;
+}
+
+
+@media screen and (max-width: 940px){		
+		
+	main{ 
+		text-align: center;
+	}
+
+	main #logobap{
+		position: static;
+		width: 100px;
+		margin-top: 10px;
+	}
+
+	main #logobap:hover{
+		width: 100px;
+	}
+
+	main #navigation #lienbouton{
+		display: flex;
+		flex-flow: column nowrap;
+		margin: 0;
+		overflow: hidden;
+	}
+	main #navigation #lienbouton a{
+  		margin: 0;
+		padding: 20px 0 20px 0;
+		display: block;
+	}
+
+	main #navigation a#hamburger{
+		display: block;
+		padding: 20px;
+	}
+
+	main{
+		position: static;
+		top: -500px;
+	}		
+}
+
+ /*texte, titres et images commun à toutes les pages------------------------------------------------------------------------------------*/
+ div.flex{
+	display: flex; 
+	flex-flow: row wrap; 
+	justify-content: space-around; 
+	align-items: center;
+}
+
+div.selection{
+	background-color: black;
+}
+
+.contenu{
+	left: 0; 
+	right: 0; 
+	margin: 0px 0 0 0; 
+	padding-top:30px; 
+	padding-bottom: 30px;
+}
+
+.misevaleur{
+	background-color: #FFFEE4; 
+	margin: 0 auto; 
+	width: 1000px; 
+	border-radius: 0px 0px 4px 4px;
+}
+
+.contenu h2{ 
+	font-size:30px; 
+	color: #fff001; 
+	text-align: center;
+}
+
+.contenu p, li{
+	color: black; 
+	font-size: 25px;
+	padding: 20px; 
+	margin: 0;  
+	text-indent: 15px;
+}
+
+.contenu ul{
+	padding-left: 20px;
+}
+
+.contenu .cadre{
+	border-radius: 2px;
+	margin:25px 0 25px 0;
+	width: 427px;
+	height: 240px;
+}
+
+.contenu a{
+	color:black;
+}
+
+.contenu a:hover{
+	color: #fff001; 
+	font-weight: bold;
+}
+
+.contenu a:active{
+	color: white; 
+	font-weight: bold;
+}
+
+main div #navigation p, li{
+	text-indent: 0px;
+}
+
+.titre{
+	background-color: black;
+	padding: 20px 0 20px 5%; 
+	margin-right: 50%; 
+	border-radius: 0px 4px 4px 0px;
+}
+
+html body img.icone{
+	height: 25px; 
+	width: 25px; 
+	margin: 0 0 0 10px;
+	border-radius:0; 
+	border:0;
+}
+
+html body img.reseaux{
+	border-radius:0;
+}
+
+.contenu li{
+	padding: 0; 
+	margin:10px;
+}
+
+
+/*info du site (footer)*/
+
+.infosdusite{
+	text-shadow: 1px 1px 1px black; 
+	text-align: center; 
+	background-color: #151515; 
+	color: #848484; 
+	border: 1px white hidden; 
+	border-radius: 5px 5px 0 0; 
+	font-size: 15px;
+	position: relative;
+	bottom: -50vh
+}
+
+.infosdusite p{
+	margin:0; 
+	padding: 2em 1em 2em 1em;
+}
+
+.infosdusite a{
+	color:#848484;
+}
+
+.infosdusite a:hover{
+	color: #fff001; 
+	font-weight: bold;
+}
+
+.infosdusite a:active{
+	color: white; 
+	font-weight: bold;
+}
+
+@media screen and (max-width: 940px ){ /* modif mobile*/
+	.contenu{
+		margin: 0;
+	}
+
+ 	.contenu p{
+		font-size: 20px;
+	}
+
+ 	.contenu li{
+		font-size: 20px;
+	}
+
+ 	html body img.icone{
+		height: 20px; 
+		width: 20px;
+	}
+
+ 	.contenu iframe{
+		height:180px; 
+		width: 320px;
+	}
+
+	.contenu img{
+		height:180px; 
+		width: 320px;
+	}
+
+	.contenu h2{
+		font-size: 25px;
+	}
+
+	.titre{
+		padding-left:0; 
+		margin-right: 0; 
+		border-radius: 0;
+	}
+
+	.infosdusite{
+		font-size: 12px;
+	}
+	
+	.misevaleur{
+		margin: 0; 
+		width: 100%; 
+		padding-top: 0; 
+		border-radius: 0 0 4px 4px;
+	}
+
+ 	main{
+		position: sticky;
+	}
+ }
+
+
+ /*scrollbar*/
+
+ ::-webkit-scrollbar{ width: 10px; }
+ ::-webkit-scrollbar-track{ box-shadow: inset 0 0 5px black; }
+ ::-webkit-scrollbar-thumb{ background-color: #151515; }
+
+ /*formulaires*/
+
+form{
+	/*margin: 10px 30% 10px 30%;*/
+	font-size: 23px;
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+	align-content: center;
+}
+
+form *{
+	display: block;
+	margin-top: 10px;
+	width: 20vw;
+}
+
+form input[type=text],input[type=password],input[type=email], input[type=datetime-local]{
+	width: 20vw;
+	border: 1px black solid;
+	border-radius: 3px;
+	padding: 5px;
+	margin-top: 0;
+}
+
+form textarea, input[type=number]{
+	border: 1px black solid;
+	border-radius: 3px;
+}
+
+form input[type=submit], button{
+	background-color: black;
+	color: #fff001;
+	border:  0px black solid;
+	border-radius: 2px;
+	padding: 5px;
+	font-family: Police1 ;
+	font-size: 20px;
+	width: auto;
+}
+form input[type=submit]:hover, button:hover{
+	cursor: pointer;
+	background-color: rgb(31, 31, 31);
+}
+form label{
+	font-size: 20px;
+}
+
+@media screen and (max-width: 940px){
+	form label{
+		width: 50%;
+	}
+
+	form input[type=text],input[type=password],input[type=email]{
+		width: 50vw;	
+	}
+
+	form input[type=submit]{
+		width: 25%;
+	}
+}
+/*------------------------------------------------accueil.php--------------------------------------------------------------------------------------*/
+/*Accueil*/
+#introsite{
+	background-image: url(../images/backgrounds/imageimpro4a.jpg);
+	background-size: contain; 
+	background-attachment: fixed; 
+	background-position: center;
+	background-repeat: no-repeat;
+	padding-top: 60vh; 
+}
+
+#introsite h1{
+	padding:10px 0 10px 0; 
+	background-color: rgba(0, 0, 0, 0.5); 
+	backdrop-filter: blur(10px) saturate(125%); 
+	margin: 0px;
+	border: 2px #151515 hidden; 
+	border-right: 0; 
+	font-size: 45px; 
+	color: #fff001; 
+	text-shadow: 2px 2px 2px black; 
+	text-align: center; 
+}
+ 
+
+@media screen and (max-width: 940px){
+	#introsite{
+		margin-top: 0; 
+		padding-top: 0px; 
+		background-position: center; 
+		background-attachment: scroll;
+		background-size: cover;
+	}
+
+	#introsite{
+		padding: 300px 0 0px 0;
+	}
+
+ 	#introsite h1{
+		font-size: 35px; 
+		margin: 0; 
+		text-align: center; 
+		padding-left: 0; 
+		padding-right: 0;
+	}
+}	
+ 
+
+#impropourtous .contenu p{
+	display: inline-block; 
+}
+
+
+/*-------------------------------------------------------Contacts.php-------------------------------------------------------------------------------*/
+
+#infocontact .contenu .trans{
+	padding-top: 5px; margin-top: 20px;
+}
+
+#infocontact .contenu .flex{
+	justify-content: space-around;
+}
+
+#infocontact .contenu .reseaux{
+	padding: 0; 
+	margin: 0; 
+	height: 60px; 
+	width: 60px; 
+	border: 0;
+}
+
+#infocontact .contenu a.res{
+	margin: 0; 
+	padding: 0; 
+	background-color: black; 
+	border-radius: 8px 8px 8px 8px;
+}
+
+#infocontact .contenu a.res:hover{
+	background-color: #DCD663;
+}
+
+#infocontact .contenu a.res:active{
+	background-color: #fff000;
+}
+
+#infocontact .misevaleur{
+	margin-bottom: 332px;
+}
+
+@media screen and (max-width: 940px){
+ 	#infocontact .contenu{
+		margin-top: 0px;
+	}
+
+ 	#infocontact .contenu .flex{
+		justify-content: space-around;
+	}
+
+ 	#infocontact .contenu ul{
+		padding: 0; 
+		margin: 0;
+	}
+
+ 	#infocontact .contenu ul li{
+		margin: 10px 0 0 10px;
+	}
+}
+
+ 
+/*---------------------------------------------------------Lieux.php----------------------------------------------------------------------------------*/
+
+#infolieux{
+	padding-top: 10px;
+}
+#infolieux .titre{
+	margin-top: 80px;
+}
+#infolieux #selection{
+	margin-top: 100px;
+	padding: 10px; 
+	border-top: 2px #fff000 solid; 
+	border-bottom: 2px #fff000 solid; 
+	background-color: #000;
+}
+
+#infolieux #selection a{
+	color: black; 
+	background-color: #FFF001; 
+	padding: 15px 20px 15px 20px; 
+	border-radius: 2px 2px 2px 2px;
+	text-decoration: none;
+	font-size: 30px;
+	font-weight: bold; 
+	margin: 10px;
+}
+
+#infolieux #selection a:hover{
+	background-color: #c6ba00; 
+	font-weight: bold;
+}
+
+#infolieux #selection a:active{
+	color: white; 
+	font-weight: bold;
+}
+
+#infolieux .contenu p{
+	text-shadow: none; 
+	font-weight: bold; 
+	text-align: center;
+	padding:0 10% 0 10%;
+}
+
+#infolieux iframe{
+	border: 2px black solid;
+}
+
+#infolieux .contenu .flex{
+	flex-direction: column;
+}
+
+
+ @media screen and (max-width: 940px){
+	#infolieux{padding-top: 10%;}
+	#infolieux .titre{margin-top: 0;}
+ 	#infolieux #selection{margin-top: 0px;}
+ 	#infolieux #selection a{font-size: 15px;}
+	#infolieux .contenu .titre{margin-top: 0px;}
+ }
+
+/* --------------------------------------------------------------Bande.php---------------------------------------------------------------------------------*/
+
+ @media screen and (max-width: 940px){
+	 #histoirebap .contenu{margin-top: 0px;
+	}
+ }
+
+/* --------------------------------------------------------------Maquette.php---------------------------------------------------------------------------------*/
+ #maquettesite .contenu{background-color: grey; margin-top: 215px;}
+
+ @media screen and (max-width: 940px){
+ 	#maquettesite .contenu{margin-top: 0px;}
+ }
+
+/* --------------------------------------------------------------Evenements.php---------------------------------------------------------------------------------*/
+
+
+#lesevenements .contenu a{
+	width: 15vw;
+	background-color: black;
+	text-decoration: none;
+	text-align: center;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+#lesevenements .contenu a img{
+	height: auto;
+	width: 100%;
+}
+
+#lesevenements .contenu a span{
+	color: #fff001;
+	font-size: 20px;
+}
+
+#lesevenements .contenu .spectacledesc{
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+}
+
+@media screen and (max-width: 940px){
+	#lesevenements .contenu{margin-top: 0px;}
+	#lesevenements .contenu a{width: 45vw;}
+}
+
+/* --------------------------------------------------------------plansite.php---------------------------------------------------------------------------------*/
+
+#plansite .contenu{margin-top: 100px;}
+#plansite .misevaleur{margin-bottom: 375px;}
+
+ @media screen and (max-width: 940px){
+ 	#plansite .contenu{margin-top: 0px;}
+ }
+
+ /*-------------------------------------------------------------galerie-----------------------------------------------------------------------------------------*/
+
+#galerie .contenu img{border: 2px black solid; margin:25px 0 25px 0;}
+#galerie .contenu img{width: 213px;height: 120px;}
+#galerie .contenu div.flex{align-items:flex-start ; justify-content: center;}
+#galerie .contenu a{margin: 10px 10px 10px 10px;}
+
+ /*-------------------------------------------------------------Connexion----------------------------------------------------------------------------------------*/
+
+#connexion .contenu p{
+	text-align: center;
+}
+
+/*--------------------------------------------------------------Inscription---------------------------------------------------------------------------------------*/
+
+#inscription .contenu p{
+	text-align: center;
+	font-size: 16px;
+}
+
+/*--------------------------------------------------------------Profil---------------------------------------------------------------------------------------*/
+
+#profil .contenu table{
+}
+
+
+#profil .contenu form{
+	display: inline;
+}
+
+/*--------------------------------------------------------------Spectacle--------------------------------------------------------------------------------------*/
+
+#spectacle .contenu img {
+	width: 15vw;
+	background-color: black;
+	padding: 10px;
+	border-radius: 5px;
+}
